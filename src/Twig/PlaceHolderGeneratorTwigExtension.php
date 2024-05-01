@@ -5,13 +5,13 @@ namespace Olivier127\PlaceHolderGenerator\Twig;
 use Olivier127\PlaceHolderGenerator\Register\PlaceHolderRegister;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
+use Symfony\Component\DependencyInjection\Attribute\AsTaggedItem;
 
+#[AsTaggedItem('twig.extension')]
 class PlaceHolderGeneratorTwigExtension extends AbstractExtension
 {
-    public function __construct(
-        private PlaceHolderRegister $placeHolderRegister
-    ) {
-
+    public function __construct(private PlaceHolderRegister $placeHolderRegister)
+    {
     }
 
     public function getFunctions()
@@ -21,10 +21,8 @@ class PlaceHolderGeneratorTwigExtension extends AbstractExtension
         ];
     }
 
-    public function geneneratePlaceHolder(string $format) : string
+    public function generatePlaceHolder(string $format) : string
     {
-        [$imageFormat, $extension] = explode('.', $format, 2);
-
         return $this->placeHolderRegister->generate($format);
     }
 }

@@ -20,7 +20,15 @@ class PlaceHolderGeneratorPass implements CompilerPassInterface
         $taggedServices = $container->findTaggedServiceIds('sulu.picture_placeholder_generator');
 
         foreach ($taggedServices as $id => $tags) {
-            $definition->addMethodCall('addPlaceHolderGenerator', [new Reference($id)]);
+            foreach ($tags as $attributes) {
+                $definition->addMethodCall(
+                    'addPlaceHolderGenerator',
+                    [
+                        new Reference($id),
+                        $attributes['alias'],
+                    ]
+                );
+            }
         }
     }
 }

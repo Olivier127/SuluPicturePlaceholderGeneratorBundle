@@ -4,10 +4,18 @@ declare(strict_types=1);
 
 namespace Olivier127\PlaceHolderGenerator\Generator;
 
+use Symfony\Component\DependencyInjection\Attribute\Autowire;
+use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
+
+#[AutoconfigureTag('sulu.picture_placeholder_generator', ['alias' => 'lorempicsum'])]
 class LoremPicsum implements PlaceHolderGeneratorInterface
 {
-    public function generate(int $with, int $height, string $format = "webp"): string
+    public function __construct(#[Autowire(param: 'placeholder.lorempicsum')] private array $config = [])
     {
-        return sprintf("https://picsum.photos/%d/%d.%d?random=%s", $with, $height, $format, uniqid());
+    }
+
+    public function generate(int $width, int $height, string $format): string
+    {
+        return sprintf("https://picsum.photos/%d/%d.%s?random=%s", $width, $height, $format, uniqid());
     }
 }
