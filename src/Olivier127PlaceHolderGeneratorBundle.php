@@ -8,7 +8,7 @@ use Olivier127\PlaceHolderGenerator\DependencyInjection\Compiler\PlaceHolderGene
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
-class PlaceHolderGeneratorBundle extends AbstractBundle
+class Olivier127PlaceHolderGeneratorBundle extends AbstractBundle
 {
     public function getPath(): string
     {
