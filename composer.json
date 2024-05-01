@@ -1,0 +1,27 @@
+{
+    "name": "olivier127/sulu-picture-placeholder-generator-bundle",
+    "description": "Bundle for generating picture placeholder for sulu",
+    "type": "sulu-bundle",
+    "license": "MIT",
+    "homepage": "https://github.com/Olivier127/SuluPicturePlaceholderGeneratorBundle",
+    "keywords": [
+        "images",
+        "sulu"
+    ],
+    "authors": [
+        {
+            "name": "Olivier Fouache",
+            "email": "olivier127@yahoo.fr"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "sulu/sulu": "^2.5",
+        "twig/twig": "^1.41 || ^2.0 || ^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Olivier127\\Sulu\\PicturePlaceholderGenerator\\": "src"
+        }
+    }
+}
