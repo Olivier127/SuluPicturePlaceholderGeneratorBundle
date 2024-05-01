@@ -1,6 +1,6 @@
 <?php
 
-namespace Olivier127\Sulu\PicturePlaceHolderGenerator\Generator;
+namespace Olivier127\PlaceHolderGenerator\Generator;
 
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 

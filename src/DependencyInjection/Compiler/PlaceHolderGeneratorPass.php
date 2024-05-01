@@ -1,8 +1,8 @@
 <?php
 
-namespace Olivier127\Sulu\PicturePlaceHolderGenerator\DependencyInjection\Compiler;
+namespace Olivier127\PlaceHolderGenerator\DependencyInjection\Compiler;
 
-use Olivier127\Sulu\PicturePlaceHolderGenerator\Register\PlaceHolderRegister;
+use Olivier127\PlaceHolderGenerator\Register\PlaceHolderRegister;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;

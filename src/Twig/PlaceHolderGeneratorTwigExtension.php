@@ -1,8 +1,8 @@
 <?php
 
-namespace Olivier127\Sulu\PicturePlaceHolderGenerator\Twig;
+namespace Olivier127\PlaceHolderGenerator\Twig;
 
-use Olivier127\Sulu\PicturePlaceHolderGenerator\Register\PlaceHolderRegister;
+use Olivier127\PlaceHolderGenerator\Register\PlaceHolderRegister;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 

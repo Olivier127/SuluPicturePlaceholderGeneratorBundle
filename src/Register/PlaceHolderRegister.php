@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Olivier127\Sulu\PicturePlaceHolderGenerator\Register;
+namespace Olivier127\PlaceHolderGenerator\Register;
 
-use Olivier127\Sulu\PicturePlaceHolderGenerator\Generator\PlaceHolderGeneratorInterface;
+use Olivier127\PlaceHolderGenerator\Generator\PlaceHolderGeneratorInterface;
 
 class PlaceHolderRegister
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Olivier127\Sulu\PicturePlaceHolderGenerator\Generator;
+namespace Olivier127\PlaceHolderGenerator\Generator;
 
 class LoremPicsum implements PlaceHolderGeneratorInterface
 {

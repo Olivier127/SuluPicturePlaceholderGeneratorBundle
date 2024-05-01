@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Olivier127\Sulu\PicturePlaceHolderGenerator;
+namespace Olivier127\PlaceHolderGenerator;
 
-use Olivier127\Sulu\PicturePlaceHolderGenerator\DependencyInjection\Compiler\PlaceHolderGeneratorPass;
+use Olivier127\PlaceHolderGenerator\DependencyInjection\Compiler\PlaceHolderGeneratorPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
-class SuluPicturePlaceHolderGeneratorBundle extends AbstractBundle
+class PlaceHolderGeneratorBundle extends AbstractBundle
 {
     public function getPath(): string
     {

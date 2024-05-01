@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Olivier127\\Sulu\\PicturePlaceholderGenerator\\": "src"
+            "Olivier127\\PlaceHolderGenerator\\": "src"
         }
     }
 }
