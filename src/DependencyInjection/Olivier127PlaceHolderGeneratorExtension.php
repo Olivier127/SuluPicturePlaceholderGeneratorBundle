@@ -20,7 +20,6 @@ class Olivier127PlaceHolderGeneratorExtension extends Extension
 
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('placeholder_generator.mode', $config['mode']);
         $container->setParameter('placeholder_generator.lorempicsum', $config['lorempicsum'] ?? []);
         $container->setParameter('placeholder_generator.placehold', $config['placehold'] ?? []);
     }

@@ -46,13 +46,6 @@ class Configuration implements ConfigurationInterface
                         ->end()
                     ->end()
                 ->end()
-                ->enumNode('mode')
-                    ->values(['random', 'lorempicsum', 'placehold'])
-                    ->validate()
-                        ->ifNotInArray(['random', 'lorempicsum', 'placehold'])
-                        ->thenInvalid('Invalid mode')
-                    ->end()
-                ->end()
             ->end()
         ;
 

@@ -2,10 +2,8 @@ services:
     Olivier127\PlaceHolderGenerator\:
         autowire: true
         autoconfigure: true
-        public: true
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
             - '../src/Kernel.php'
-

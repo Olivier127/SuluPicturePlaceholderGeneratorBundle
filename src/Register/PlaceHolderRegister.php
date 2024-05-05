@@ -14,31 +14,18 @@ class PlaceHolderRegister implements PlaceHolderRegisterInterface
      */
     private $generators;
 
-    public function __construct(
-        #[Autowire(param: 'sulu_media.image.formats')] private array $formats,
-        #[Autowire(param: 'placeholder_generator.mode')] private string $mode
-    ) {
-
-    }
-
     public function addPlaceHolderGenerator(PlaceHolderGeneratorInterface $generator, string $alias): void
     {
         $this->generators[$alias] = $generator;
     }
 
-    public function generate(string $suluImageformat): string
+    public function getPictureGenerator(): PlaceHolderGeneratorInterface
     {
-        $suluFormat = explode(".", $suluImageformat);
-        $imageFormatKey = $suluFormat[0];
-        $extension = $suluFormat[1] ?? "webp";
+        return $this->generators['picture_generator'];
+    }
 
-        $format = $this->formats[$imageFormatKey];
-        $with = $format["scale"]['x'] ?? $format["scale"]['y'];
-        $height = $format["scale"]['y'] ?? $format["scale"]['x'];
-
-        if ($this->mode != "random") {
-            return $this->generators[$this->mode]->generate($with, $height, $extension);
-        }
-        return $this->generators[array_rand($this->generators)]->generate($with, $height, $extension);
+    public function getPlaceHolderGenerator(): PlaceHolderGeneratorInterface
+    {
+        return $this->generators['placeholder_generator'];
     }
 }

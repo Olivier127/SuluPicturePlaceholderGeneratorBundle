@@ -8,8 +8,9 @@ use Olivier127\PlaceHolderGenerator\Generator\PlaceHolderGeneratorInterface;
 
 interface PlaceHolderRegisterInterface
 {
-
     public function addPlaceHolderGenerator(PlaceHolderGeneratorInterface $generator, string $alias): void;
 
-    public function generate(string $suluImageformat): string;
+    public function getPlaceHolderGenerator() : PlaceHolderGeneratorInterface;
+
+    public function getPictureGenerator() : PlaceHolderGeneratorInterface;
 }
