@@ -1,6 +1,3 @@
-Bien sûr ! Voici un exemple de `README.md` pour votre bundle :
-
-```markdown
 # Sulu Picture Placeholder Generator Bundle
 
 This bundle provides functionality for generating picture placeholders for Sulu CMS.
@@ -80,5 +77,4 @@ This Twig function generates a picture using the configured picture generator. T
 ```
 
 The `options` argument uses the same configuration as `lorempicsum`.
-```
 
