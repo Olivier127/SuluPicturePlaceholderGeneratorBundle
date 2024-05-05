@@ -1,7 +1,7 @@
 {
     "name": "olivier127/sulu-picture-placeholder-generator-bundle",
     "description": "Bundle for generating picture placeholder for sulu",
-    "type": "sulu-bundle",
+    "type": "symfony-bundle",
     "license": "MIT",
     "homepage": "https://github.com/Olivier127/SuluPicturePlaceholderGeneratorBundle",
     "keywords": [
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Olivier127\\PlaceHolderGenerator\\": "src"
+            "Olivier127\\PlaceHolderGenerator\\": "src/"
         }
     }
 }
