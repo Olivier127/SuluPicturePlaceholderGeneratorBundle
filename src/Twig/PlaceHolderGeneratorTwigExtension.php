@@ -27,7 +27,7 @@ class PlaceHolderGeneratorTwigExtension extends AbstractExtension
         return $this->placeHolderRegister->getPlaceHolderGenerator()->generate($format, $options);
     }
 
-    public function generatPicture(string $format, array $options = []) : string
+    public function generatePicture(string $format, array $options = []) : string
     {
         return $this->placeHolderRegister->getPictureGenerator()->generate($format, $options);
     }
