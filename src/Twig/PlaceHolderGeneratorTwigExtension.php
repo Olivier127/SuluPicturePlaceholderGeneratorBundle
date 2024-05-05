@@ -22,12 +22,29 @@ class PlaceHolderGeneratorTwigExtension extends AbstractExtension
         ];
     }
 
-    public function generatePlaceHolder(string $format, array $options = []) : string
+
+    /**
+     * Generates a placeholder using the registered placeholder generator.
+     *
+     * @param   string  $format     The format of the placeholder.
+     * @param   array   $options    Additional options for generating the placeholder (optional).
+     *
+     * @return  string  The generated placeholder.
+     */
+    public function generatePlaceHolder(string $format, array $options = []): string
     {
         return $this->placeHolderRegister->getPlaceHolderGenerator()->generate($format, $options);
     }
 
-    public function generatePicture(string $format, array $options = []) : string
+    /**
+     * Generates a picture using the registered picture generator.
+     *
+     * @param   string  $format     The format of the picture.
+     * @param   array   $options    Additional options for generating the picture (optional).
+     *
+     * @return  string  The generated picture.
+     */
+    public function generatePicture(string $format, array $options = []): string
     {
         return $this->placeHolderRegister->getPictureGenerator()->generate($format, $options);
     }

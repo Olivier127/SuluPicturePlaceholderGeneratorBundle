@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Olivier127\PlaceHolderGenerator\Register;
 
-use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Olivier127\PlaceHolderGenerator\Generator\PlaceHolderGeneratorInterface;
 
 class PlaceHolderRegister implements PlaceHolderRegisterInterface
